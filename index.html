@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A clean, searchable system design learning experience." />
+  <meta name="theme-color" content="#0b0d10" />
+  <title>System Design — Lav Sarkari</title>
+  <link rel="stylesheet" href="./assets/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand-wrap">
+        <button class="icon-btn mobile-only" id="menuBtn" aria-label="Open navigation">☰</button>
+        <a class="brand" href="./">
+          <span class="brand-mark">SD</span>
+          <span><strong>System Design</strong><small>learning notes</small></span>
+        </a>
+      </div>
+      <div class="top-actions">
+        <label class="search" for="searchInput">
+          <span>⌕</span><input id="searchInput" type="search" placeholder="Search topics…" autocomplete="off" />
+          <kbd>/</kbd>
+        </label>
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☼</button>
+        <a class="github-btn" href="https://github.com/LavSarkari/system-design" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-head">
+          <span>COURSE</span>
+          <button class="icon-btn mobile-only" id="closeMenu" aria-label="Close navigation">×</button>
+        </div>
+        <nav id="toc" aria-label="Course navigation"></nav>
+        <div class="progress-card">
+          <div class="progress-label"><span>Reading progress</span><strong id="progressText">0%</strong></div>
+          <div class="progress-track"><i id="progressBar"></i></div>
+          <small id="progressMeta">0 of 0 sections read</small>
+        </div>
+      </aside>
+
+      <main class="content-wrap">
+        <section class="hero">
+          <div class="eyebrow">SYSTEM DESIGN · OPEN LEARNING</div>
+          <h1>Design systems.<br><em>Don’t just draw boxes.</em></h1>
+          <p>Architecture, infrastructure, data, distributed systems, and the trade-offs that make software survive real users.</p>
+          <div class="hero-meta"><span>▣ Structured notes</span><span>⌁ Self-paced</span><span>◌ Open source</span></div>
+        </section>
+
+        <div class="mobile-progress">
+          <div class="progress-label"><span>Progress</span><strong id="mobileProgressText">0%</strong></div>
+          <div class="progress-track"><i id="mobileProgressBar"></i></div>
+        </div>
+
+        <article id="content" class="prose">
+          <div class="loading"><span class="spinner"></span>Loading the course…</div>
+        </article>
+
+        <footer class="site-footer">
+          <div><strong>System Design</strong><br><span>A polished reading layer for the course material.</span></div>
+          <div class="footer-links"><a href="https://github.com/LavSarkari/system-design">Repository</a><a href="https://github.com/karanpratapsingh/system-design">Upstream</a></div>
+          <p>This fork preserves attribution to the original author and license. The frontend is an independent presentation layer.</p>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+  <script src="./assets/app.js"></script>
+</body>
+</html>
